@@ -1,0 +1,18 @@
+# 98c7429 2019-02-27
+git clone https://github.com/DaemonEngine/crunch.git
+
+# c0593a3 2017-08-24
+git clone https://github.com/jacano/ManagedCrunch.git
+
+cd ManagedCrunch/src/crunch
+
+cp ../../../crunch/inc/crn_decomp.h crn_decomp.h
+cp ../../../crunch/inc/crnlib.h crnlib.h
+cp ../../../crunch/inc/crn_defs.h crn_defs.h
+
+patch -p1 <../../../ManagedCrunch_ext_build/crn_cpp_changes.diff
+
+g++ crn.cpp -c -O3 --std=gnu++0x -fomit-frame-pointer -ffast-math -fno-math-errno -fno-strict-aliasing -fPIC -g -Wall -Wno-unused-value -Wno-unused -march=core2 -shared -o libcrndecomp.so
+
+cp libcrndecomp.so ../../../ManagedCrunch_ext_build/libcrndecomp.so
+
