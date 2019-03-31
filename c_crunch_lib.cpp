@@ -70,7 +70,7 @@ EXPORT void crn_decompress_only_face(
     crnd::crnd_unpack_context pContext =
         crnd::crnd_unpack_begin(static_cast<crn_uint8*>(src), src_size);
     
-    for (int i = firstLevel; i < firstLevel + levelCount; ++i) {
+    for (unsigned int i = firstLevel; i < firstLevel + levelCount; ++i) {
         crn_uint32 blocks_x = (width + 3) >> 2;
         crn_uint32 blocks_y = (height + 3) >> 2;
         crn_uint32 row_pitch = blocks_x * bytes_per_block;
@@ -112,7 +112,7 @@ EXPORT void crn_decompress_six_faces(
     crnd::crnd_unpack_context pContext =
         crnd::crnd_unpack_begin(static_cast<crn_uint8*>(src), src_size);
 
-    for (int i = firstLevel; i < firstLevel + levelCount; ++i) {
+    for (unsigned int i = firstLevel; i < firstLevel + levelCount; ++i) {
         crn_uint32 blocks_x = (width + 3) >> 2;
         crn_uint32 blocks_y = (height + 3) >> 2;
         crn_uint32 row_pitch = blocks_x * bytes_per_block;
