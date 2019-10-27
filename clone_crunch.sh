@@ -12,5 +12,4 @@ cd ..
 
 popd
 
-./build_linux.sh
 
