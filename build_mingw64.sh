@@ -12,10 +12,10 @@ x86_64-w64-mingw32-g++ c_crunch_lib.cpp -c -Os --std=gnu++0x -fomit-frame-pointe
 
 x86_64-w64-mingw32-g++ c_crunch_lib.cpp -c -Os --std=gnu++0x -fomit-frame-pointer -ffast-math -fno-math-errno -fno-strict-aliasing -g -Wall -Wno-unused-value -Wno-unused -o libcrndecomp-mingw64-static.o
 
-ar rcs libcrndecomp-mingw64-static.a libcrndecomp-mingw64-static.o
+x86_64-w64-mingw32-ar rcs libcrndecomp-mingw64-static.a libcrndecomp-mingw64-static.o
 
 cp libcrndecomp.dll ../
 
-cp libcrndecomp-mingw64-static.o ../
+cp libcrndecomp-mingw64-static.a ../
 
 popd
