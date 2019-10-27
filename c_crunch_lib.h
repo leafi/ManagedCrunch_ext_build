@@ -42,7 +42,7 @@ void crn_get_info(
     void* src,
     unsigned int src_size,
     unsigned int* out_faces,
-    crn_format* out_format,
+    enum crn_format* out_format,
     unsigned int* out_levels,
     unsigned int* out_width,
     unsigned int* out_height

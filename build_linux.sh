@@ -12,10 +12,10 @@ g++ c_crunch_lib.cpp -c -Os --std=gnu++0x -fomit-frame-pointer -ffast-math -fno-
 
 g++ c_crunch_lib.cpp -c -Os --std=gnu++0x -fomit-frame-pointer -ffast-math -fno-math-errno -fno-strict-aliasing -g -Wall -Wno-unused-value -Wno-unused -march=core2 -o libcrndecomp-linux-static.o
 
-# ar rcs crndecomp-linux.a c_crunch_lib.o
+ar rcs libcrndecomp-linux-static.a libcrndecomp-linux-static.o
 
 cp libcrndecomp-linux.so ../
 
-cp libcrndecomp-linux-static.o ../
+cp libcrndecomp-linux-static.a ../
 
 popd
